@@ -19,11 +19,37 @@
  *    Free Software Foundation, Inc.,                                       *
  *    59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  *                                                                          *
- *    To contact the author, please write to:                               *
+ *    To contact the authors, please write to:                              *
  *    Rafael Aziz Da Silva Rocha <rafaelazizlvr@gmail.com>                  *
  *    Webpage: http://www.upe.br                                            *
  *    Phone: +55 (81) 99940-3183                                            *
  * ************************************************************************ *
  * 
  */
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void)
+{
+    int k;
+    int x=0;
+
+    srand(time(NULL);
+    while(x<100)
+    {
+        k=rand()(101);
+        if(k == 1)
+        {
+            printf("blablabla");
+            x++;
+        }    
+        if(k == 2)
+        {
+           prinf("blablabla2");
+           x++;
+        }
+    }
+    return 0;
+}
 
