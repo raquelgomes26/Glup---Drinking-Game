@@ -35,10 +35,10 @@ int main(void)
     int k;
     int x=0;
 
-    srand(time(NULL);
+    srand(time(NULL));
     while(x<100)
     {
-        k=rand()(101);
+        k=rand()%(101);
         if(k == 1)
         {
             printf("blablabla");
@@ -46,7 +46,7 @@ int main(void)
         }    
         if(k == 2)
         {
-           prinf("blablabla2");
+           printf("blablabla2");
            x++;
         }
     }
