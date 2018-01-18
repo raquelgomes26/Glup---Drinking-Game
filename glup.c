@@ -29,27 +29,44 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
+#include <unistd.h>
+
+#define MAX 500
 
 int main(void)
 {
     int k;
-    int x=0;
+    int i;
+	char j = ' ', c;
+	char perg[101][MAX] = {0};
+	FILE *com;
+	com = fopen("commands.txt", "rt");
+
+	for(i=0; i<=99; i++)
+		fgets(perg[i], MAX, com);
+	
+	fclose(com);
 
     srand(time(NULL));
-    while(x<100)
-    {
-        k=rand()%(101);
-        if(k == 1)
-        {
-            printf("blablabla");
-            x++;
-        }    
-        if(k == 2)
-        {
-           printf("blablabla2");
-           x++;
-        }
-    }
-    return 0;
+	while(1)
+	{
+		j = ' ';
+		k =((rand() + getpid())%100);
+    	printf("%s'n' to continue or 'q' to quit\n", perg[k]);
+		scanf("%c", &j);
+		while((c=getchar())!='\n' && c != EOF);
+	    while(j != 'n')
+	    {
+			if(j == 'q')
+    			return EXIT_SUCCESS;
+			else 
+			{
+				printf("Invalid character, type again.\n");
+				scanf("%c", &j);
+				while((c=getchar())!='\n' && c != EOF);
+			}
+			usleep(16667);
+		}
+	}
 }
-
