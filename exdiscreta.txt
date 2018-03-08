@@ -1,0 +1,41 @@
+ex1.c
+faça um programa que tenha um laço que rode os indices de um vetor de 10 elementos de forma aleatoria
+
+
+ex2.c
+simulador de rede de petri
+
+rp-input-1.txt
+
+
+3 numero de lugares
+numero de tokens
+6
+0
+1
+
+2 transições
+2 tipos de arcos(arcos consumidores e arco de transição produtor)
+
+2 Arcos consumidores{
+arco lugar->transição rotulo
+0 0 1
+1 1 2
+}
+
+3 arcos produtores{
+
+0 1 1
+0 0 1
+1 2 3
+}
+
+rp-input-2.txt livre pra escolha
+
+rp-input-3.txt par ou impar
+
+perguntas de saída da simulação:
+
+quantos tokens tem em cada lugar?
+quantas vezes cada transição dispara? em proporção
+quais arcos foram utilizados?
